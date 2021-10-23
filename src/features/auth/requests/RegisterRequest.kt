@@ -16,15 +16,14 @@ data class RegisterRequest(
     init {
         Validation<RegisterRequest> {
             RegisterRequest::username {
-                minLength(2)
-                maxLength(50)
+                minLength(5)
             }
             RegisterRequest::email required {}
             RegisterRequest::password1 required {
-                minLength(4)
+                minLength(5)
             }
             RegisterRequest::password2 required {
-                minLength(4)
+                minLength(5)
             }
         }.validateAndThrowOnFailure(this)
     }

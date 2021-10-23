@@ -12,19 +12,27 @@ class TaskListRepository(
         return user.taskLists
     }
 
-    suspend fun addTaskList(email: String, taskList:TaskList){
+    suspend fun addTaskList(email: String, taskList: TaskList) {
         val user = userDataSource.getUser(email)
+        user.taskLists.add(taskList)
+        userDataSource.updateUser(user)
     }
 
-    suspend fun renameTaskList(email: String, name: String, index: Int){
+    suspend fun renameTaskList(email: String, name: String, index: Int) {
         val user = userDataSource.getUser(email)
+        user.taskLists[index].name = name
+        userDataSource.updateUser(user)
     }
 
-    suspend fun updateTaskListOrder(email: String, order: Order, index: Int){
+    suspend fun updateTaskListOrder(email: String, order: Order, index: Int) {
         val user = userDataSource.getUser(email)
+        user.taskLists[index].order = order
+        userDataSource.updateUser(user)
     }
 
-    suspend fun deleteTaskList(email: String, index: Int){
+    suspend fun deleteTaskList(email: String, index: Int) {
         val user = userDataSource.getUser(email)
+        user.taskLists.removeAt(index)
+        userDataSource.updateUser(user)
     }
 }

@@ -7,6 +7,6 @@ import kotlinx.serialization.Serializable
 data class TaskList(
     val id: Int?,
     var name: String,
-    val tasks: List<Task>,
+    val tasks: ArrayList<Task>,
     var order: Order
 )

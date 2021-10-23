@@ -1,11 +1,7 @@
 package com.example
 
-import com.example.setUp.configSetup
-import com.example.setUp.koinSetup
 import com.example.di.productionModules
-import com.example.setUp.authSetup
-import com.example.setUp.contentNegotiationSetup
-import com.example.setUp.routesSetup
+import com.example.setUp.*
 import io.ktor.application.*
 import org.koin.core.module.Module
 
