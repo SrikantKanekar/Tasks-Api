@@ -21,6 +21,12 @@ class AuthRepository(
         return checkPassword(passwordToCheck, user.password)
     }
 
+    suspend fun updateToken(email: String, token: String){
+        val user = userDataSource.getUser(email)
+        user.token = token
+        userDataSource.updateUser(user)
+    }
+
     suspend fun getUser(email: String): User {
         return userDataSource.getUser(email)
     }

@@ -10,5 +10,7 @@ interface UserDataSource {
 
     suspend fun getUser(email: String): User
 
+    suspend fun getAllUser(): List<User>
+
     suspend fun updateUser(user: User)
 }

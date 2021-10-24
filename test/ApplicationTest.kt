@@ -1,16 +1,13 @@
 package com.example
 
-import io.ktor.application.*
-import io.ktor.response.*
-import io.ktor.request.*
-import io.ktor.routing.*
 import io.ktor.http.*
-import io.ktor.features.*
-import io.ktor.auth.*
-import kotlin.test.*
 import io.ktor.server.testing.*
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.time.ExperimentalTime
 
 class ApplicationTest {
+    @ExperimentalTime
     @Test
     fun testRoot() {
         withTestApplication({ module(testing = true) }) {

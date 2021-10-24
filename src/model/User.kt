@@ -8,4 +8,5 @@ data class User(
     var password: String,
     var username: String,
     val taskLists: ArrayList<TaskList> = ArrayList(),
+    var token: String? = null
 )

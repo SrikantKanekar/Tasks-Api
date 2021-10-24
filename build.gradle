@@ -30,6 +30,7 @@ sourceSets {
 
 repositories {
     mavenCentral()
+    google()
 }
 
 dependencies {
@@ -41,6 +42,9 @@ dependencies {
     // Auth
     implementation "io.ktor:ktor-auth:$ktor_version"
     implementation "io.ktor:ktor-auth-jwt:$ktor_version"
+
+    // Firebase Admin Sdk
+    implementation 'com.google.firebase:firebase-admin:8.1.0'
 
     // MongoDb Database
     implementation 'org.litote.kmongo:kmongo:4.3.0'
