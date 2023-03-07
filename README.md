@@ -1,6 +1,8 @@
 # Tasks-Api
 
-Rest Api for Tasks android application
+Rest Api for Tasks flutter application
+
+Frontend - https://github.com/SrikantKanekar/TasksApp-Flutter
 
 ## API Reference
 
