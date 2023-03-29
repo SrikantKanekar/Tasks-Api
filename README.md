@@ -1,8 +1,8 @@
 # Tasks-Api
 
-APIs for Tasks app
+Backend for Flutter Tasks app.
 
-Frontend - https://github.com/SrikantKanekar/TasksApp-Flutter
+Frontend client - https://github.com/SrikantKanekar/TasksApp-Flutter
 
 ## API Reference
 
